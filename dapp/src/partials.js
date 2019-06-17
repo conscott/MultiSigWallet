@@ -620,7 +620,7 @@ angular.module('multiSigWeb').run(['$templateCache', function($templateCache) {
     "      ng-click=\"executeMultisigTransactionOffline()\" show-hide-by-connectivity=\"offline\">\n" +
     "        Execute offline\n" +
     "      </button>\n" +
-    "      <button type=\"button\" class=\"btn btn-default\" disabled-if-no-accounts\n" +
+    "      <button id=\"hackedinidforbutton\" type=\"button\" class=\"btn btn-default\" disabled-if-no-accounts\n" +
     "      ng-click=\"addTransaction()\">\n" +
     "        Add\n" +
     "      </button>\n" +

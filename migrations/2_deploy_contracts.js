@@ -4,6 +4,15 @@ const MultisigWalletFactory = artifacts.require('MultiSigWalletWithDailyLimitFac
 
 module.exports = deployer => {
   const args = process.argv.slice()
+  let idx = args.indexOf('--network')
+  if (idx > 0) {
+    args.splice(idx, 2)
+  }
+  idx = args.indexOf('--reset')
+  if (idx > 0) {
+    args.splice(idx, 1)
+  }
+  console.log("Argv is " + args)
   if (process.env.DEPLOY_FACTORY){
     deployer.deploy(MultisigWalletFactory)
     console.log("Factory with Daily Limit deployed")

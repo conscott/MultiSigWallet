@@ -16,23 +16,16 @@ module.exports = {
   },
   networks: {
     // Ganache interface
+    development: {
+      host: "localhost",
+      port: 7545,
+      network_id: "*", // Match any network id
+      gas: 4000000,
+      gasPrice: 10000000000, // 10 gwei
+    },
     local: {
       host: ganacheHost,
       port: 7545,
-      network_id: "*" // Match any network id
-    },
-    // For running solidity-coverage
-    coverage: {
-      host: 'localhost',
-      port: 8545,
-      network_id: "*",
-      gas: 0xfffffffffff, 
-      gasPrice: 0x01 
-    },
-    // For using self hosted geth instance
-    geth: {
-      host: 'http://' + process.env.GETH_ROPSTEN_HOST,
-      port: 8545,
       network_id: "*" // Match any network id
     },
     // For using Infura Ropsten Provider
