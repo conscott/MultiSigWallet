@@ -1,0 +1,15 @@
+version: '3'
+services:
+
+  # The Application
+  app:
+    build: .
+    container_name: multisig
+    working_dir: /usr/src/app
+    volumes:
+      - ./:/usr/src/app
+    environment:
+      - DOCKER_COMPOSE=true
+    command: ["npm", "run", "start"]
+    ports:
+      - 5000:5000
