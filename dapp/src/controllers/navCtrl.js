@@ -51,7 +51,9 @@
         }
 
         // If not terms acepted, prompt disclaimer
+        localStorage.setItem("gdprTermsAccepted", true);
         var gdprTermsAccepted = localStorage.getItem("gdprTermsAccepted");
+        console.log("In here...")
 
         if (!gdprTermsAccepted) {
             $uibModal.open({
@@ -78,11 +80,11 @@
                 $scope.openTerms = function() {
                   Utils.openResource(txDefault.resources.termsOfUse);
                 }
-        
+
                 $scope.openPolicy = function () {
                   Utils.openResource(txDefault.resources.privacyPolicy);
                 }
-        
+
                 $scope.openImprint = function () {
                   Utils.openResource(txDefault.resources.imprint);
                 }
