@@ -805,7 +805,7 @@ angular.module('multiSigWeb').run(['$templateCache', function($templateCache) {
     "          Balance\n" +
     "        </th>\n" +
     "        <th>\n" +
-    "          Required confirmations\n" +
+    "          Required approvals\n" +
     "        </th>\n" +
     "        <th>\n" +
     "          Daily limit\n" +
@@ -1856,7 +1856,7 @@ angular.module('multiSigWeb').run(['$templateCache', function($templateCache) {
     "      <input id=\"name\" type=\"text\" class=\"form-control\" ng-model=\"name\" required ng-min-length=\"1\" />\n" +
     "    </div>\n" +
     "    <div class=\"form-group\">\n" +
-    "      <label for=\"required\">Required confirmations</label>\n" +
+    "      <label for=\"required\">Required approvals</label>\n" +
     "      <input id=\"required\" type=\"number\" class=\"form-control\" ng-min=\"1\" ng-max=\"{{maxAllowedConfirmations}}\" ng-model=\"confirmations\" required />\n" +
     "    </div>\n" +
     "    <div class=\"form-group\">\n" +
@@ -2712,7 +2712,7 @@ angular.module('multiSigWeb').run(['$templateCache', function($templateCache) {
     "<form name=\"form\" class=\"form\">\n" +
     "  <div class=\"modal-body\">\n" +
     "    <div class=\"form-group\">\n" +
-    "      <label for=\"confirmations\">Required confirmations</label>\n" +
+    "      <label for=\"confirmations\">Required approvals</label>\n" +
     "      <input id=\"confirmations\" type=\"number\" class=\"form-control\" ng-min=\"1\" ng-model=\"required\" required>\n" +
     "    </div>\n" +
     "  </div>\n" +
