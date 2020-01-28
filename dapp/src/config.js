@@ -30,7 +30,7 @@ var txDefaultOrig =
   walletFactoryAddress: "0x6e95c8e8557abc08b46f3c347ba06f8dc012763f",
   tokens: [
     {
-      'address': '0x65A186c94290a3Cf8a8317a0556eE6882Ae613bB',
+      'address': '0x40362d38546726773477D25dDC17BEf48bf7307B',
       'name': 'CACHE Gold Token',
       'symbol': 'CGT',
       'decimals': 8
