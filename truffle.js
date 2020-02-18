@@ -30,7 +30,7 @@ module.exports = {
     },
     // For using Infura Ropsten Provider
     ropsten: {
-      provider: () => new HDWalletProvider(privateKeys, "https://ropsten.infura.io/v3/" + process.env.infuraKey, 0, 1), 
+      provider: () => new HDWalletProvider(privateKeys, "https://ropsten.infura.io/v3/" + process.env.infuraKey, 0, 1),
       network_id: 3,
       gas: 5000000,
       gasPrice: 10000000000,
@@ -42,7 +42,9 @@ module.exports = {
       provider: () => new HDWalletProvider(privateKeys, "https://mainnet.infura.io/v3/" + process.env.infuraKey, 0, 1),
       network_id: 1,
       gas: 5000000,
-      gasPrice: 10000000000
+      gasPrice: 8000000000,
+      confirmations: 1,
+      skipDryRun: true
     }
   }
 };
