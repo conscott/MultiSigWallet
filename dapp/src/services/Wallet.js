@@ -55,7 +55,7 @@
               .get(txDefault.websites.ethGasStation)
               .then(
                 function(response) {
-                  resolve(response.data.standard)
+                  resolve(response.data.safeLow)
                 },
                 function (error) {
                   // Get gas price from Ethereum Node
@@ -341,7 +341,7 @@
             tokens: tokens
           }
         );
-        
+
         localStorage.setItem("wallets", JSON.stringify(wallets));
         wallet.updates++;
         try{
@@ -381,7 +381,7 @@
         *        "address" : [ abi array ]
         *    },
         *    "addressBook": {
-        * 
+        *
         *    }
         *  }
         *
@@ -503,7 +503,7 @@
         }
 
         wallet.wallets = wallet.toChecksummedWalletConfiguration(walletsData);
-        // Save changes to `wallets` 
+        // Save changes to `wallets`
         localStorage.setItem("wallets", JSON.stringify(wallet.wallets));
         // Save changes to `addressBook`
         if (validJsonConfig.addressBook) {
@@ -567,7 +567,7 @@
 
             Object.assign(
               tokens[Web3Service.toChecksumAddress(token)],
-              walletsData[wallet].tokens[token], 
+              walletsData[wallet].tokens[token],
               {
                 address: Web3Service.toChecksumAddress(walletsData[wallet].tokens[token].address || token)
               }
