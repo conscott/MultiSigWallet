@@ -31,7 +31,7 @@
     })
     .filter('bigNumber', function () {
       return function (big) {
-        return new Web3().toBigNumber(big).toNumber();        
+        return new Web3().toBigNumber(big).toNumber();
       };
     })
     .filter('txData', function () {
@@ -121,7 +121,7 @@
             }
           }
           if (string_split.length == 2) {
-            new_string += '.' + string_split[1].substring(0, 2);
+            new_string += '.' + string_split[1].substring(0, 8);
           }
           return new_string + " " + token.symbol;
         }
