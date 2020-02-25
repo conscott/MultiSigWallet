@@ -14,6 +14,9 @@ module.exports = {
       version: "^0.4.15",
     }
   },
+  plugins: [
+    'truffle-flatten',
+  ],
   networks: {
     // Ganache interface
     development: {
